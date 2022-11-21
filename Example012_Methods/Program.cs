@@ -51,17 +51,39 @@ Console.WriteLine(year);
 
 // Вид 4 (что-то принимают, что-то возвращают)
 
+// string Method4(int count, string text)
+// {
+//     int i = 0;
+//     string result = String.Empty; //Значит, что начало у нас будет пустой строкой
+//     while(i < count)
+//     {
+//         result = result + text;
+//         i++;
+//     }
+//     return result;
+// }
+
+// string res = Method4(count: 10, text: "Чмок ");
+// Console.WriteLine(res);
+
 string Method4(int count, string text)
 {
-    int i = 0;
-    string result = String.Empty; //Значит, что начало у нас будет пустой строкой
-    while(i < count)
+    string result = String.Empty;
+    for(int i = 0; i < count; i++) // Все циклы взаимозаменяемы
     {
         result = result + text;
-        i++;
     }
     return result;
 }
 
 string res = Method4(count: 10, text: "Чмок ");
 Console.WriteLine(res);
+
+for(int i = 2; i <= 10; i++)
+{
+    for(int j = 2; j <= 10; j++)
+    {
+        Console.WriteLine($"{i} * {j} = {i * j}");
+    }
+    Console.WriteLine(); // Сделает "дырку" между выводами
+}
